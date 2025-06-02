@@ -48,12 +48,27 @@ public class AppConfig {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration cfg = new CorsConfiguration();
-                cfg.setAllowedOrigins(Arrays.asList("https://frontend-react-iup3yxw9f-naresh-challas-projects.vercel.app/",
-                        "https://frontend-react-ten-zeta.vercel.app/",
+                cfg.setAllowedOrigins(Arrays.asList(
+                        "https://frontend-react-iup3yxw9f-naresh-challas-projects.vercel.app",
+                        "https://happyshoping.vercel.app",
                         "https://frontend-react-algb.onrender.com/",
                         "http://localhost:3000"));
+                cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+                cfg.setAllowedHeaders(Arrays.asList(
+                        "Authorization",
+                        "Content-Type",
+                        "X-Requested-With",
+                        "Accept",
+                        "Origin",
+                        "Cache-Control"
+                ));
                 cfg.setAllowedMethods(Collections.singletonList("*"));
                 cfg.setAllowCredentials(true);
+                cfg.setExposedHeaders(Arrays.asList(
+                        "Authorization",
+                        "Content-Disposition",
+                        "Set-Cookie"
+                ));
                 cfg.setAllowedHeaders(Collections.singletonList("*"));
                 cfg.setExposedHeaders(Arrays.asList("Authorization"));
                 cfg.setMaxAge(3600L);
