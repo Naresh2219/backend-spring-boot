@@ -50,6 +50,7 @@ public class AppConfig {
                 CorsConfiguration cfg = new CorsConfiguration();
                 cfg.setAllowedOrigins(Arrays.asList(
                         "https://happyshoping.vercel.app",
+                        "https://backend-spring-boot-m6de.onrender.com",
                         "http://localhost:3000"));
                 cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
                 cfg.setAllowedHeaders(Arrays.asList(
