@@ -49,9 +49,7 @@ public class AppConfig {
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration cfg = new CorsConfiguration();
                 cfg.setAllowedOrigins(Arrays.asList(
-                        "https://frontend-react-iup3yxw9f-naresh-challas-projects.vercel.app",
                         "https://happyshoping.vercel.app",
-                        "https://frontend-react-algb.onrender.com/",
                         "http://localhost:3000"));
                 cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
                 cfg.setAllowedHeaders(Arrays.asList(
