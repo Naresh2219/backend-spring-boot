@@ -50,7 +50,7 @@ public class SellerController {
         String otp = OtpUtils.generateOTP();
         VerificationCode verificationCode = verificationService.createVerificationCode(otp, req.getEmail());
 
-        String subject = "Zosh Bazaar Login Otp";
+        String subject = "HappyShoping Login Otp";
         String text = "your login otp is - ";
         emailService.sendVerificationOtpEmail(req.getEmail(), verificationCode.getOtp(), subject, text);
 
