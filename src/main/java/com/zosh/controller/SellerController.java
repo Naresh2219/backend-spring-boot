@@ -127,8 +127,8 @@ public class SellerController {
         String otp = OtpUtils.generateOTP();
         VerificationCode verificationCode = verificationService.createVerificationCode(otp, seller.getEmail());
 
-        String subject = "Zosh Bazaar Email Verification Code";
-        String text = "Welcome to Zosh Bazaar, verify your account using this link ";
+        String subject = "HappyShoping Email Verification Code";
+        String text = "Welcome to HappyShoping, verify your account using this link ";
         String frontend_url = "http://localhost:3000/verify-seller/";
         emailService.sendVerificationOtpEmail(seller.getEmail(), verificationCode.getOtp(), subject, text + frontend_url);
         return new ResponseEntity<>(savedSeller, HttpStatus.CREATED);
