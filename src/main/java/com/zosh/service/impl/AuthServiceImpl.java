@@ -105,7 +105,7 @@ public class AuthServiceImpl implements AuthService {
             createdUser.setEmail(email);
             createdUser.setFullName(fullName);
             createdUser.setRole(USER_ROLE.ROLE_CUSTOMER);
-            createdUser.setMobile("9083476123");
+            createdUser.setMobile("");
             createdUser.setPassword(passwordEncoder.encode(otp));
 
             System.out.println(createdUser);
